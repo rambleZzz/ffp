@@ -12,22 +12,6 @@ import (
 	"time"
 )
 
-//func main() {
-//	var aliveTargets []string
-//	var notAliveTargets []string
-//	targets := []string{"baidu.com", "114.115.129.37:8092", "221.193.200.135:8080/fineReport/ReportServer", "http://www.iqiyi.com", "https://www.youku.com", "aaaa.csksk"}
-//	// accept domains on stdin
-//	for _, t := range targets {
-//		target := common.TargetStrip(t)
-//		url, ok := isUrlAlive(target)
-//		if ok {
-//			aliveTargets = append(aliveTargets, target)
-//		} else {
-//			notAliveTargets = append(notAliveTargets, target)
-//		}
-//		fmt.Printf("%v  %v  %v\n", target, url, ok)
-//	}
-//}
 
 type UrlAlive struct {
 	Client  *http.Client `json:"client"`
