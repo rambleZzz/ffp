@@ -109,7 +109,7 @@ https://www.example:com:7777/erp
 #### 3、其他参数
 ```
 
-(请先使用masscan扫描 masscan -p 1-65535 -oJ test.json)
+
 ./ffp -f 1.txt -t 10 -noe
 
 -t 代表线程，不填写默认为5
