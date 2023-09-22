@@ -80,10 +80,10 @@ thirdparty: # 路径必须配置在当前目录下，不可自定义当前执行
 
  ## 版本
 
- v1.0 初版
- v1.1 优化
- v1.2 ipscan模块ip归属地查看由调用cip.cc获取 修改为通过qqwry ip纯真库提高效率
-      修复遇到IPV6也统计在C短地址BUG
+ v1.0 初版   
+ v1.1 优化   
+ v1.2 ipscan模块ip归属地查看由调用cip.cc获取 修改为通过qqwry ip纯真库提高效率   
+      修复遇到IPV6也统计在C短地址BUG   
 
 
 ## 使用帮助:
