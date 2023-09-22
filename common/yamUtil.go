@@ -5,12 +5,13 @@ import (
 	"log"
 )
 
-var configYaml = `# AutoScan Yaml Config
+var configYaml = `# FFP Yaml Config
 thirdparty: # 路径必须配置在当前目录下，不可自定义当前执行文件以外的其他目录
   ObserverWardPath: /thirdparty/observerWard/observer_ward # observer_ward 可执行文件
   ObserverWardDir: /thirdparty/observerWard/ # observerWard 所在目录
   WebFingerprintPath: /thirdparty/observerWard/web_fingerprint_v3.json # fingerprintHub指纹库
   GeoLite2Path: /thirdparty/cdnCheck/GeoLite2-ASN.mmdb # ip相关
+  QqwryPath: /thirdparty/qqwry/qqwry.dat # ip纯真库
 `
 
 func ReadYaml() {
@@ -30,4 +31,5 @@ func ReadYaml() {
 	ObserverWardDir = v.GetString("thirdparty.ObserverWardDir")
 	WebFingerprintPath = v.GetString("thirdparty.WebFingerprintPath")
 	GeoLite2Path = v.GetString("thirdparty.GeoLite2Path")
+	QqwryPath = v.GetString("thirdparty.QqwryPath")
 }

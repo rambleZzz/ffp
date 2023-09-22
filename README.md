@@ -33,10 +33,10 @@ go1.20开发
    / ____/ ____/ __ \
   / /_  / /_  / /_/ /
  / __/ / __/ / ____/
-/_/   /_/   /_/       Ver:1.0
+/_/   /_/   /_/       Ver:1.2
 
 https://github.com/rambleZzz/ffp
-FFP v1.0   (FastFingerPrint)  Dev:go1.20
+FFP v1.2   (FastFingerPrint)  Dev:go1.20
 
 
 NAME:
@@ -76,6 +76,14 @@ thirdparty: # 路径必须配置在当前目录下，不可自定义当前执行
   WebFingerprintPath: /thirdparty/observerWard/web_fingerprint_v3.json # fingerprintHub指纹库
   GeoLite2Path: /thirdparty/cdnCheck/GeoLite2-ASN.mmdb # ip相关
  ``` 
+
+ ## 版本
+
+ v1.0 初版
+ v1.1 优化
+ v1.2 ipscan模块ip归属地查看由调用cip.cc获取 修改为通过qqwry ip纯真库提高效率
+      修复遇到IPV6也统计在C短地址BUG
+
 
 ## 使用帮助:
 #### 1、直接目标扫描模式：  

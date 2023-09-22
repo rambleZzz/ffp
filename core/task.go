@@ -59,14 +59,13 @@ func TaskNew(cli *cli.Context) error {
 	DomainScanTask(common.AliveTargetResult)
 
 	//无CDN IP 进行 ipscan
+	common.QqwryPath = filepath.Join(common.CurrentRunPath, common.QqwryPath)
 	common.IPResult = common.RemoveDuplicate(common.IPResult)
 	fmt.Printf("\n[%v] Ipscan scanning started, a total of (%v).\n", common.GetCurrentTimeStringTime(), len(common.IPResult))
 	bar := common.NewProgressbar(len(common.IPResult), "ipscan")
 	for _, ip := range common.IPResult {
 		if common.CheckIPV4(ip) {
 			ipscan.NewIPInfo().RunIPInfo(ip)
-			// 延时执行 cip.cc不可频繁反问，测试5秒正常
-			time.Sleep(5 * time.Second)
 			bar.Add(1)
 		}
 	}

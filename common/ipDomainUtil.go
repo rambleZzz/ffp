@@ -14,7 +14,11 @@ func GetCIDRAddresses(ipAddresses []string) []string {
 	for _, ipAddress := range ipAddresses {
 		_, ipNet, err := net.ParseCIDR(ipAddress + "/24")
 		if err != nil {
-			fmt.Println("无效的 IP 地址:", ipAddress, err)
+			//fmt.Println("无效的 IP 地址:", ipAddress, err)
+			continue
+		}
+		if !CheckIPV4(ipAddress) {
+			//fmt.Println("无效的 IPv4 地址:", ipAddress, err)
 			continue
 		}
 		cidrMap[ipNet.String()] = true

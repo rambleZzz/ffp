@@ -23,7 +23,7 @@ func ResultExport() {
 	}
 
 	// 输出IP详情至终端 和 excel
-	fmt.Printf("\n【无CDN IP统计】\n")
+	fmt.Printf("\n【无CDN IP统计】仅统计IPV4地址\n")
 	if len(IPInfoResult) > 0 {
 		ipInfoResult2DInterface, _ := ConvertStructSliceTo2D(IPInfoResult)
 		Out2terminal(Header2, ConvertInterfaceSlice2DToStringSlice(ipInfoResult2DInterface))
@@ -35,7 +35,7 @@ func ResultExport() {
 	}
 
 	// 输出无CDN C段IP地址至终端 和 excel
-	fmt.Printf("\n【无CDN IP C段统计】\n")
+	fmt.Printf("\n【无CDN IP C段统计】仅统计IPV4地址\n")
 	if len(IPResult) > 0 {
 		cidrAddresses := GetCIDRAddresses(IPResult)
 		Out2terminal(Header3, ConvertStringSliceTo2D(cidrAddresses))

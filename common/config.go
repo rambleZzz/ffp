@@ -24,7 +24,7 @@ var (
 	SheetName3 = "C段IP统计"
 	SheetName4 = "不存活目标统计"
 	Header1    = []string{"目标", "标题", "应用服务器", "ObserverWard指纹", "wappalyzer指纹", "网址", "是否有CDN", "A记录", "CNAME值", "CDN名称", "主机", "端口", "类型", "状态码", "icon哈希", "是否存活", "网站协议", "跳转URL"}
-	Header2    = []string{"IP地址", "国家地区", "运营商", "数据二", "数据三", "数据来源链接"}
+	Header2    = []string{"IP地址", "国家地区", "运营商"}
 	Header3    = []string{"C段IP"}
 	Header4    = []string{"不存活目标"}
 	Header5    = []string{"网址", "标题", "应用服务器", "ObserverWard指纹", "wappalyzer指纹", "是否有CDN", "状态码"}
@@ -79,12 +79,9 @@ type DomainDetailMin struct {
 
 // IP归属信息
 type IPInfo struct {
-	IP        string `json:"ip"`
-	Address   string `json:"address"`
-	Operator  string `json:"operator"`
-	DataTwo   string `json:"data_two"`
-	DataThree string `json:"data_three"`
-	URL       string `json:"url"`
+	IP      string `json:"ip"`
+	Country string `json:"country"`
+	City    string `json:"city"`
 }
 
 // url存活
@@ -99,10 +96,10 @@ const banner = `
    / ____/ ____/ __ \
   / /_  / /_  / /_/ /
  / __/ / __/ / ____/ 
-/_/   /_/   /_/       Ver:1.0
+/_/   /_/   /_/       Ver:1.2
 `
 const ffpAbout = `https://github.com/rambleZzz/ffp
-FFP v1.0   (FastFingerPrint)  Dev:go1.20
+FFP v1.2   (FastFingerPrint)  Dev:go1.20
 
 `
 
@@ -112,6 +109,7 @@ var (
 	ObserverWardDir    string
 	WebFingerprintPath string
 	GeoLite2Path       string
+	QqwryPath          string
 )
 
 // thirdparth
