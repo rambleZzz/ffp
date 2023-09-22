@@ -75,6 +75,7 @@ thirdparty: # 路径必须配置在当前目录下，不可自定义当前执行
   ObserverWardDir: /thirdparty/observerWard/ # observerWard 所在目录
   WebFingerprintPath: /thirdparty/observerWard/web_fingerprint_v3.json # fingerprintHub指纹库
   GeoLite2Path: /thirdparty/cdnCheck/GeoLite2-ASN.mmdb # ip相关
+  QqwryPath: /thirdparty/qqwry/qqwry.dat # ip纯真库
  ``` 
 
  ## 版本
